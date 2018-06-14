@@ -12,7 +12,7 @@
 // url or news site to be scraped
 const MEDIUM_URL = "https://medium.com/topic/technology";
 const TECH_NAV_MENU = "a.ds-link[href='" + MEDIUM_URL + "']";
-const LOAD_TIME_WAIT = 1000;
+const LOAD_TIME_WAIT = 1500;
 const MIDPOINT_VERT = 3000;
 const BOTTOM_VERT = 8000;
 
