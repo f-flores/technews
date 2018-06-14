@@ -1,0 +1,83 @@
+html body {
+  /* #wrapper {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+} */
+  background: url("../images/elegant_grid.png") repeat; }
+  html body .custom-hdr {
+    background: pink; }
+  html body .navbar-font {
+    font-family: "Cabin:700"; }
+  html body .custom-nav-bg {
+    background: linear-gradient(to right, #aca8a8, pink);
+    border-radius: 25px;
+    border: 2px solid darkblue; }
+  html body .rainbow-text {
+    background: yellow;
+    background: -webkit-linear-gradient(left, yellow, orange, green, cyan, blue, violet);
+    background: -o-linear-gradient(right, yellow, orange, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, yellow, orange, green, cyan, blue, violet);
+    background: linear-gradient(to right, yellow, orangered, green, cyan, blue, violet);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.7vw; }
+  html body .custom-link {
+    background: linear-gradient(to right, #92cfde, #76bdd1);
+    padding: 6px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px darkgray; }
+  html body .custom-link:hover {
+    background: linear-gradient(to right, #6bbed2, #50abc4);
+    color: darkgray;
+    text-shadow: 2px 2px #555858; }
+  html body .note-button {
+    background: linear-gradient(to right, #b29af8, #9174ed);
+    color: white;
+    text-shadow: 2px 2px darkgray; }
+  html body .note-button:hover {
+    background: linear-gradient(to right, #8e6af5, #6d47e7);
+    color: lightgray;
+    text-shadow: 2px 2px #555858; }
+  html body .mongo-article {
+    margin-top: 20px; }
+  html body .empty-list {
+    background: linear-gradient(to right, #ffd65e, #febf04);
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    height: 150px;
+    line-height: 150px; }
+  html body .center-vertical {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal; }
+  html body #articles {
+    margin: 20px 0px 0px 10%;
+    width: 80%; }
+  html body #notes {
+    float: right;
+    width: 30%; }
+  html body #load {
+    z-index: 5; }
+  html body textarea, html body input {
+    display: block;
+    width: 100%;
+    background-color: #FCF5C7; }
+  html body input {
+    height: 36px;
+    font-size: 24px; }
+  html body textarea {
+    height: 50px;
+    font-size: 14px; }
+  html body .notes-modal-btn {
+    height: 40px; }
+  html body .modal-dialog {
+    overflow-y: initial !important; }
+  html body .modal-body {
+    height: 400px;
+    overflow-y: auto; }

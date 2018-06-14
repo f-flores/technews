@@ -1,0 +1,32 @@
+ <div id="load">
+
+ </div>
+
+  <div id="articles">
+  {{#each articleData}}
+      {{> article/card-title}}
+
+      <section class="col-md-2 col-xs-12"> 
+      {{#if saved}}
+        <em>Already saved</em>
+      {{else}}
+        <button data-id="{{this._id}}" a-title="{{this.title}}" a-link="{{this.link}}" a-summary="{{this.summary}}" class="btn btn-success ml-auto save-button">Save Article</button>
+      {{/if}}
+      </section>
+  
+      {{> article/card-close}}
+
+      {{> article/content-card}}
+    </div>
+  {{else}}
+    <div class="row">
+      <div class="col-12">
+        <div class="empty-list"><span class="center-vertical">No new articles. Press 'Scrape News' Button to obtain articles.</span></div>
+      </div>
+    </div>
+  {{/each}}
+  </div>
+
+{{!--   <div id="notes">
+
+  </div> --}}

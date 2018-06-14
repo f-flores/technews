@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Median News Scraper</title>
+<!-- Google Fonts Library -->
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,500i,700,700i" rel="stylesheet">
+<!--   Bootstrap CSS Library -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <div id="wrapper">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <div class="custom-nav-bg p-2">
+        <a class="navbar-brand display-1 navbar-font font-weight-bold rainbow-text" href="#">MONGO SCRAPER</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link btn btn-info mt-3" id="home-link" href="/">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link btn btn-info mt-3" id="save-link" href="/saved">Saved Articles</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link btn btn-info mt-3" id="help-link" data-toggle="modal" href="#scraperHelp" data-target="#scraperHelp">Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-danger" id="scrape-link" href="#"><span><img class="img-fluid" src="./assets/images/magnifying_glass.png" alt="magnifying lass">Scrape News</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+      {{{ body }}}
+
+  </div>
+
+<!-- START NUMBER ARTICLES MODAL -->
+<div class="modal fade" id="numArticles" tabindex="-1" role="dialog" aria-labelledby="numArticlesCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="numArticlesLongTitle">Scrape Info</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="numArticlesContent"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END NUMBER ARTICLES MODAL -->
+
+<!-- NOTES MODAL -->
+<div class="modal fade" id="articleNotes" tabindex="-1" role="dialog" aria-labelledby="articleNotesCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="articleNotesLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="previousNotes"></div>
+        <div id="articleNotesContent"></div>
+      </div> 
+      <div class="modal-footer">
+{{!--         <button type="button" class="btn btn-success" data-dismiss="modal">Save Note</button> --}}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END NUMBER ARTICLES MODAL -->
+
+<!-- HELP MODAL -->
+<div class="modal fade" id="scraperHelp" tabindex="-1" role="dialog" aria-labelledby="scraperHelpCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <h5 class="modal-title" id="scraperHelpLongTitle">Median News - Mongo Scraper Help</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body bg-light">
+        <h5>Mongo Scraper is an app that acquires tech news from the Medium News site. The user can press the 'Scrape News' option and the page will be populated with news articles. Articles can be read in depth by pressing the 'Read More' button. More, if the article is interesting, you can 'save  article' and even take notes on the article. To do this, select the 'Saved Articles' button and then the 'Notes' button. Read tech news and have fun using the app!</h5>
+      </div> 
+      <div class="modal-footer bg-info">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END HELP MODAL -->
+
+
+<!--   Jquery and bootstrap javascript libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="./assets/js/median-app.js"></script>
+</body>
+
+</html>

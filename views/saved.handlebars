@@ -1,0 +1,33 @@
+
+  <div id="articles">
+  {{#each savedData}}
+      {{> article/card-title}}
+
+        <section class="col-md-1 col-xs-12"> 
+          <button data-id="{{this._id}}" a-title="{{this.title}}" a-link="{{this.link}}" a-summary="{{this.summary}}" class="btn btn-sm btn-info ml-auto unsave-button">Unsave</button>
+        </section>
+
+        <section class="col-md-1 col-xs-12"> 
+          <button data-id="{{this._id}}" a-title="{{this.title}}" a-link="{{this.link}}" a-summary="{{this.summary}}" class="btn btn-sm ml-auto note-button">Notes</button>
+        </section>
+
+        <section class="col-md-1 col-xs-12"> 
+          <button data-id="{{this._id}}" class="btn btn-sm btn-danger ml-auto delete-button">Delete</button>
+        </section>
+
+      {{> article/card-close}}
+
+      {{> article/content-card}}
+  </div>
+  {{else}}
+    <div class="row">
+      <div class="col-12">
+        <div class="empty-list"><span class="center-vertical">No saved articles</span></div>
+      </div>
+    </div>
+  {{/each}}
+  </div>
+
+  <div id="notes">
+
+  </div>
