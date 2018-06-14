@@ -1,13 +1,15 @@
 const Nightmare = require('nightmare');
 const nightmare = Nightmare({ show: false });
 
-const URL = 'http://blog.oscarmorrison.com/nightmarejs-on-heroku-the-ultimate-scraping-setup/';
+const URL = 
+"https://medium.com/topic/culture";
+/* 'http://blog.oscarmorrison.com/nightmarejs-on-heroku-the-ultimate-scraping-setup/'; */
 console.log('Welcome to Nightmare scrape\n==========');
 
 nightmare
     .goto(URL)
-    .wait('.post-title')
-    .evaluate(() => document.querySelector('.post-title').textContent)
+    .wait('.ui-h3')
+    .evaluate(() => document.querySelector('.ui-h3').textContent)
     .end()
     .then((result) => {
         console.log(result);
