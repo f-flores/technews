@@ -30,17 +30,17 @@ Backend:
 
 3. Cheerios
 
-3. Nodejs express to handle the routes
+4. Nodejs express to handle the routes
 
-4. Morgan to log
+5. Morgan to log
 
-5. Handlebars for template views
+6. Handlebars for template views
 
 ## Installation
 
 This app can be cloned and installed following the procedure below.
 
-1. Now we are ready to clone this app by running the following command. `git clone git@github.com:SigmaVX/Nuggets.git` Note that if `git` and `node` need to be installed, the steps to do so are the following: a) git must be installed. [Download git.](https://git-scm.com/downloads) and b. nodejs must also be installed. [Download nodejs](https://nodejs.org/en/download/)
+1. Now we are ready to clone this app by running the following command. `git clone git@github.com:f-flores/technews.git` Note that if `git` and `node` need to be installed, the steps to do so are the following: a) git must be installed. [Download git.](https://git-scm.com/downloads) and b. nodejs must also be installed. [Download nodejs](https://nodejs.org/en/download/)
 
 2. Since this file makes use of several node modules, please run `npm install`.  This installs all of the dependencies.
 

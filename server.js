@@ -20,7 +20,7 @@ var mongoose_options = {
       "connectTimeoutMS" : 50000
     }
   }
-}
+};
 
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -73,11 +73,11 @@ app.engine("handlebars", exphbs({
 // Connect to the Mongo DB
 // ============================================================
 mongoose.Promise = global.Promise;
-mongoose.connect(MONGODB_LOC, mongoose_options, function (err, res) {
+mongoose.connect(MONGODB_LOC, mongoose_options, function (err) {
   if (err) {
-  console.log ('ERROR connecting to: ' + MONGODB_LOC + '. ' + err);
+  console.log ("ERROR connecting to: " + MONGODB_LOC + ". " + err);
   } else {
-  console.log ('Succeeded connected to: ' + MONGODB_LOC);
+  console.log ("Succeeded connected to: " + MONGODB_LOC);
   }
 });
 
