@@ -87,6 +87,8 @@ Starter code template for project that requires running `nightmarejs` on `heroku
 - setup git remote repository on github.com from existing code
 ```
 git remote add origin git@github.com:[username]/[new-project-name].git
+git add -A
+git commit -m "Initial commit"
 git push -u origin master
 ```
 - `heroku create`
