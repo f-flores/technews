@@ -75,14 +75,19 @@ A link to the app on heroku:
 
 ## Getting started
 
-Template for project. Note that once project is cloned, the URL and `wait()` lines in index.js must be changed because the original html does not exist at the time of this writing.
+Starter code template for project that requires running `nightmarejs` on `heroku`. Note that once project is cloned, the URL and `wait()` lines in index.js must be changed because the original html does not exist at the time of this writing. Once nightmare runs successfully, one can expand on the project.
 
 - `git clone --depth 1 git@github.com:oscarmorrison/nightmare-heroku [new-project-name]`
 
 - `cd [new-project-name]`
 - `rm -rf .git`
 - `git init`
-- `heroku create [app-name]`
+- setup git remote repository on github.com
+```
+git remote add origin git@github.com:[username]/[new-project-name].git
+git push -u origin master
+```
+- `heroku create`
 - `heroku stack:set cedar-14`
 - set build packs
 ```
@@ -92,4 +97,7 @@ heroku buildpacks:add --index 3 https://github.com/causztic/heroku-electron-buil
 heroku buildpacks:add --index 4 https://github.com/heroku/heroku-buildpack-nodejs.git
 ```
 - `git push heroku master`
+- goto heroku dashboard and select created app; install `Heroku Scheduler` add-on
 - `heroku ps:scale web=1`
+- `node ./index.js` to verify nightmare runs correctly
+- `heroku logs` to check output for any errors
