@@ -58,6 +58,8 @@ A link to the app on heroku:
 
 ## Instructions for Running NightmareJS on Heroku
 
+Source: [https://github.com/oscarmorrison/nightmare-heroku](https://github.com/oscarmorrison/nightmare-heroku)
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/1651212/27013967-6cbd6b8a-4ebc-11e7-9cd8-e5d0fcb01440.png" alt="logo" width="600px" />
  </p>
