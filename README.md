@@ -60,27 +60,9 @@ A link to the app on heroku:
 
 Source: [https://github.com/oscarmorrison/nightmare-heroku](https://github.com/oscarmorrison/nightmare-heroku)
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/1651212/27013967-6cbd6b8a-4ebc-11e7-9cd8-e5d0fcb01440.png" alt="logo" width="600px" />
- </p>
-
-
-# NightmareJS on Heroku <a href="https://heroku.com/deploy" target="_blank"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Heroku deploy" align="right"></a>
-
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/oscarmorrison/nightmare-heroku/issues)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=plastic)](https://github.com/oscarmorrison/nightmare-heroku/blob/master/LICENSE)  [![GitHub issues](https://img.shields.io/github/issues/oscarmorrison/nightmare-heroku.svg)](https://github.com/oscarmorrison/nightmare-heroku/issues)
-
-
-## Deployment of NightmareJS on Heroku
-
-[NightmareJS](http://www.nightmarejs.org/) is an awesome highlevel webscraping and browser automation library built ontop of electron. This repo is a good starting place to be able to use it with some default setups ontop of heroku using the following instructions. [Read more](http://blog.oscarmorrison.com/nightmarejs-on-heroku-the-ultimate-scraping-setup/)
-
-## Getting started
-
 Starter code template for project that requires running `nightmarejs` on `heroku`. Note that once project is cloned, the URL and `wait()` lines in index.js must be changed because the original html does not exist at the time of this writing. Once nightmare runs successfully, one can expand on the project.
 
 - `git clone --depth 1 git@github.com:oscarmorrison/nightmare-heroku [new-project-name]`
-
 - `cd [new-project-name]`
 - `rm -rf .git`
 - `git init`
