@@ -10,9 +10,10 @@
 // =======================================================================================
 
 // url or news site to be scraped
-const MEDIUM_URL = "https://medium.com/topic/technology";
-const TECH_NAV_MENU = "a.ds-link[href='" + MEDIUM_URL + "']";
-const LOAD_TIME_WAIT = 1500;
+// const MEDIUM_URL = "https://medium.com/topic/technology";
+const MEDIUM_URL = "https://money.cnn.com/technology/";
+// const TECH_NAV_MENU = "a.ds-link[href='" + MEDIUM_URL + "']";
+const LOAD_TIME_WAIT = 1700;
 const MIDPOINT_VERT = 3000;
 const BOTTOM_VERT = 8000;
 
@@ -104,7 +105,7 @@ module.exports = function(app) {
 		// do something in the chain to go to your desired page.
 			.wait(LOAD_TIME_WAIT)
 		// Click the technology menu to reload page and retrieve more news items
-			.click(TECH_NAV_MENU)
+		//	.click(TECH_NAV_MENU)
 			.wait(LOAD_TIME_WAIT)
 		// scroll down in order to load more news items
 			.scrollTo(MIDPOINT_VERT,0)
@@ -117,12 +118,12 @@ module.exports = function(app) {
 				// the articles array will hold the news items found on the page
 				var articles = [];
 				// search the html for the articles based on the u-flexColumnTop class
-				$(".dy dz").each(function(i, element){
+				$("._16wRP").each(function(i, element){
 					var article = {};
 					// scrape title, link and summary of medium news article
-					article.title = $(element).children(".bu bv bw w bx x ck ea eb q ct ec ed").children("a").text();
-					article.link = $(element).children(".bu bv bw w bx x ck ea eb q ct ec ed").children("a").attr("href");
-					article.summary = $(element).children("a").text();
+					article.title = $(element).children("a").text();
+					article.link = $(element).children("a").attr("href");
+					article.summary = $(element).children("._1iT_b").text();
 
 					articles.push(article);
 				}); 
