@@ -117,11 +117,11 @@ module.exports = function(app) {
 				// the articles array will hold the news items found on the page
 				var articles = [];
 				// search the html for the articles based on the u-flexColumnTop class
-				$(".u-flexColumnTop").each(function(i, element){
+				$(".dy dz").each(function(i, element){
 					var article = {};
 					// scrape title, link and summary of medium news article
-					article.title = $(element).children(".u-flex0").children("a").text();
-					article.link = $(element).children(".u-flex0").children("a").attr("href");
+					article.title = $(element).children(".bu bv bw w bx x ck ea eb q ct ec ed").children("a").text();
+					article.link = $(element).children(".bu bv bw w bx x ck ea eb q ct ec ed").children("a").attr("href");
 					article.summary = $(element).children("a").text();
 
 					articles.push(article);
