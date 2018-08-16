@@ -123,7 +123,7 @@ module.exports = function(app) {
 					// scrape title, link and summary of medium news article
 					article.title = $(element).children("a").text();
 					article.link = $(element).children("a").attr("href");
-					article.summary = $(element).text();
+					article.summary = $(element).children().text() + " ";
 
 					articles.push(article);
 				}); 
