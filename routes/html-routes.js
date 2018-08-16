@@ -123,21 +123,24 @@ module.exports = function(app) {
 					// scrape title, link and summary of medium news article
 					article.title = $(element).children("a").text();
 					article.link = $(element).children("a").attr("href");
-					article.summary = $(element).children("._1iT_b").text();
+					article.summary = $(element).text();
 
 					articles.push(article);
 				}); 
 				// return scraped data
 				return articles;
 
-			})
+      })
+      .catch(function(err) {
+        console.log(err);
+      })
 			.then((data) => {
 				// insert all of the articles found into the mongoose database
 				db.Article.insertMany(data)
 					.then(function(dbArticle) {
 						// View the added result in the console
 						console.log(dbArticle);
-						res.json("Done scraping data");
+						res.json({"numArticles": data.length});
 					})
 					.catch(function(err) {
 						// If an error occurred, send it to the client

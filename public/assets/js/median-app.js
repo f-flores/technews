@@ -38,8 +38,8 @@ $( document).ready(function() {
 			$("#numArticlesContent").empty();
 			$("#load > img#loading-img").remove();
 			$("#articles").append("Done scraping");
-			console.log(`num articles found: ${data.length}`);
-			$("#numArticlesContent").html(`<h4>Found ${data.length} Articles.</h4>`);
+			console.log(`num articles found: ${data.numArticles}`);
+			$("#numArticlesContent").html(`<h4>Found ${data.numArticles} Articles.</h4>`);
 			$("#numArticles").modal("show");
 		});
 	});
