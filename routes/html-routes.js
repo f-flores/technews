@@ -1,7 +1,7 @@
 // ===================================================================================
 // File name: html-routes.js
 // Description: Using nodejs express, this file provides the html routes for the
-//  scraper app.
+//  scraper app. This app scrapes the cnn.com news site.
 //
 // ====================================================================================
 
