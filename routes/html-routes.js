@@ -11,7 +11,9 @@
 
 // url or news site to be scraped
 // const MEDIUM_URL = "https://medium.com/topic/technology";
-const MEDIUM_URL = "https://money.cnn.com/technology/";
+// const MEDIUM_URL = "https://money.cnn.com/technology/";
+const CNN_TECH_URL = "https://www.cnn.com/business/tech";
+const CNN_URL = "https://www.cnn.com";
 // const TECH_NAV_MENU = "a.ds-link[href='" + MEDIUM_URL + "']";
 const LOAD_TIME_WAIT = 1700;
 const MIDPOINT_VERT = 3000;
@@ -100,7 +102,7 @@ module.exports = function(app) {
 	// ---------------------------------------------------------------------
 	app.get("/scrapearticles", function(req, res) {
 		Nightmare({ show: false })
-			.goto(MEDIUM_URL)
+			.goto(CNN_TECH_URL)
 		// wait 3 seconds so page is guaranteed to be fully loaded
 		// do something in the chain to go to your desired page.
 			.wait(LOAD_TIME_WAIT)
@@ -118,12 +120,18 @@ module.exports = function(app) {
 				// the articles array will hold the news items found on the page
 				var articles = [];
 				// search the html for the articles based on the u-flexColumnTop class
-				$("._16wRP").each(function(i, element){
-					var article = {};
+				$(".cd__headline").each(function(i, element){
+          var article = {};
+
 					// scrape title, link and summary of medium news article
-					article.title = $(element).children("a").text();
-					article.link = $(element).children("a").attr("href");
-					article.summary = $(element).children().text() + " ";
+          article.title = $(element).children("a").text();
+          article.link = $(element).children("a").attr("href");
+          article.summary = $(element).children().text() + " ";
+          if (article.link !== undefined) {
+            if (!article.link.startsWith("http")) {
+              article.link = `${CNN_URL}${article.link}`;
+            }
+          }
 
 					articles.push(article);
 				}); 
