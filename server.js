@@ -4,7 +4,7 @@
 // Description: controller for median-scrape news
 //
 // ===================================================================================
-
+require("dotenv").config();
 var PORT = process.env.PORT || 3500;
 
 var mongoose_options = {
