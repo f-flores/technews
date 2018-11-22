@@ -1,7 +1,7 @@
 {
   "name": "nightmare-heroku",
   "version": "1.1.0",
-  "description": "",
+  "description": "CNN Tech news site scraper.",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
