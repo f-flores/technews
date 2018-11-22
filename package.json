@@ -4,9 +4,7 @@
   "description": "CNN Tech news site scraper.",
   "main": "server.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon\"",
+    "start": "node server.js",
     "clean": "rm -rf node_modules",
     "reinstall": "npm run clean && npm install"
   },
