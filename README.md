@@ -2,7 +2,7 @@
 
 ## Description
 
-Technews scrapes technology news articles from the cnn.com business news website. This app that lets users view the news articles and leave notes or comments on the latest tech info.
+Technews scrapes technology news articles from the cnn.com business technology news website. This app that lets users view the news articles and leave notes or comments on the latest tech info.
 
 ## How Technews Works
 

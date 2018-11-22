@@ -123,7 +123,7 @@ module.exports = function(app) {
 				$(".cd__headline").each(function(i, element){
           var article = {};
 
-					// scrape title, link and summary of medium news article
+					// scrape title, link and summary of cnn business news article
           article.title = $(element).children("a").text();
           article.link = $(element).children("a").attr("href");
           article.summary = $(element).children().text() + " ";
