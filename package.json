@@ -8,9 +8,7 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon\"",
     "clean": "rm -rf node_modules",
-    "reinstall": "npm run clean && npm install",
-    "rebuild": "npm run clean && npm install && npm run build",
-    "heroku-postbuild": "npm run build"
+    "reinstall": "npm run clean && npm install"
   },
   "repository": {
     "type": "git",
