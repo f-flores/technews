@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "web":"node server.js",
     "clean": "rm -rf node_modules",
     "reinstall": "npm run clean && npm install"
   },
