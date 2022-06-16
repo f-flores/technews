@@ -25,7 +25,7 @@
     "cheerio": "^1.0.0-rc.2",
     "concurrently": "^4.1.0",
     "dotenv": "^6.1.0",
-    "electron": "^1.6.10",
+    "electron": "^15.5.5",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "if-env": "^1.0.4",
